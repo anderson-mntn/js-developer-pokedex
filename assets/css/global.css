@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-image: url(/js-developer-pokedex-main/assets/imgs/bg.png);
 }
 
 .content {
@@ -16,6 +16,9 @@ body {
 .content .closeButton{
     display: none;
 }
+.content .main-stats{
+    display: none;
+}
 .modal{
     width: 100vw;
     height: 100vh;
@@ -24,6 +27,100 @@ body {
     top: 0;
     right: 0; 
 }
+#modalpoke {
+    font-size: 2rem;
+}
+.modal .main-stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1rem;
+}
+.modal .main-stats li span{
+    font-size: 1rem;
+}
+.pokemon-btn:hover{
+    cursor: pointer;
+    color: #fff;
+}
+.pokemon-btn{
+    width: max-content;
+}
+.content .poke-details-text{
+    display: none;
+}
+.modal .poke-details-text{
+    display: flex;
+}
+.modal #btn-pokedetails{
+    display: none;
+}
+.modal .detail img{
+    width: 260px;
+    max-height: 300px;
+}
+#modal-id{
+    display: none;
+}
+.main-stats{
+    list-style: none;
+    width: 90%;
+}
+.main-stats li{
+    margin: 5px;
+}
+.modal .type{
+    font-size: 20px;
+}
+.modal ol{
+    list-style: none;
+    align-self: flex-start;
+}
+#modalpoke{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: auto;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+}
+#modalpoke .type {
+    width: fit-content;
+}
+#modalpoke .types{
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+}
+#modalpoke .types li {
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.modal .detail .types li{
+    width: auto;
+    justify-content: center;
+}  
+.modal .closeButton{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px 4px grey;
+    font-size: 1.25rem;
+}
+
 
 
 @media screen and (min-width: 992px) {
@@ -32,5 +129,11 @@ body {
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 576px){
+    body{
+        background-color: black;
     }
 }

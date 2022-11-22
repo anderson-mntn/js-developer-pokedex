@@ -20,18 +20,16 @@ function convertPokemonToLi(pokemon) {
                      alt="${pokemon.name}">
             </div>
             <div class="pokemon-btn" id="btn-pokedetails">More details</div>
-            <div class="poke-details-text">Detalhes abaixo</div>
+            <ul class="main-stats">
+                <li>Weight: <span>${pokemon.weight / 10} kg</span></li>
+                <li>Height: <span>${pokemon.height / 10} m</span></li>
+                <li>Main Move: <span>${pokemon.mainmove}</span></li>
+            </ul>
             <input type="button" value="X" class="closeButton" id="closeBtn">
 
         </li>
     `
 }
-// let detailBtn = document.querySelectorAll(".pokemon-btn")
-// detailBtn.addEventListener('click', showDetails)
-// function showDetails(){
-//     console.log("detalhes");
-// }
-
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -55,3 +53,25 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+//  ---------- Modal and click events  ----------
+let modal = document.querySelector('#modal-id')
+let closeModalBtn = document.querySelector('#closeBtn')
+
+document.addEventListener('click', function(e){
+    if(e.target.innerText == "More details"){
+        modal.style.display = "flex"
+        let pokeactual = e.target.parentElement
+        var pokeli = document.querySelector('#modalpoke')
+        console.log(pokeactual.class);
+        pokeli.innerHTML = pokeactual.innerHTML
+    }
+
+    if(e.target.id == "closeBtn"){
+        modal.style.display = "none"
+    } 
+
+})
+
+
+   
