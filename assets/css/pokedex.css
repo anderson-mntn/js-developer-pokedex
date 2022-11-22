@@ -86,6 +86,7 @@
     border-radius: 1rem;
 }
 
+
 .pokemon .number {
     color: #000;
     opacity: .3;
@@ -154,13 +155,16 @@
     align-self: flex-start;
 }
 #modalpoke{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: rgb(158, 36, 36) 2px solid;
     width: 500px;
     margin: auto;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 1rem;
 }
 #modalpoke .type {
     width: fit-content;
@@ -178,7 +182,23 @@
 }
 #modalpoke span{
     font-size: 2rem;
+}
+.modal .detail .types li{
+    width: auto;
+    justify-content: center;
 }  
+.modal .closeButton{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px 4px grey;
+}
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

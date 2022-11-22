@@ -21,6 +21,7 @@ function convertPokemonToLi(pokemon) {
             </div>
             <div class="pokemon-btn" id="btn-pokedetails">More details</div>
             <div class="poke-details-text">Detalhes abaixo</div>
+            <input type="button" value="X" class="closeButton" id="closeBtn">
 
         </li>
     `

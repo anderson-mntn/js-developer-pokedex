@@ -13,14 +13,17 @@ body {
     padding: 1rem;
     background-color: #fff;
 }
-/* .modal{
-    width: auto;
-    height: 500px;
-    background-color: rgba(0,0,0,);
+.content .closeButton{
+    display: none;
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .4);
     position: fixed;
     top: 0;
     right: 0; 
-} */
+}
 
 
 @media screen and (min-width: 992px) {
