@@ -43,8 +43,28 @@
 
     <style>
         .pokemon-btn:hover{
-            background-color: red;
+            cursor: pointer;
+            color: #fff;
         }
+        .pokemon-btn{
+            background-color: green;
+            width: max-content;
+        }
+        .content .poke-details-text{
+            display: none;
+        }
+        .modal .poke-details-text{
+            display: flex;
+        }
+        .modal #btn-pokedetails{
+            display: none;
+        }
+        .modal .detail img{
+            width: 260px;
+        }
+
+        
+        
     </style>
 
     
@@ -95,25 +115,17 @@
 
 
     <div class="modal">
-        <div class="modal-pokemon">Pokemon com detalhesss
+        <div id="modalpoke">Pokemon com detalhesss  <!-- class="modal-pokemon" -->
             <input type="button" value="X" class="closeButton">
         </div>
         
     </div>
 
-    <!-- <script>
-        document.addEventListener('click', function(e){
-            console.log(e.target);
-        })
-    </script> -->
-
-
-
     <!-- Nosso JS -->
-    <script src="./assets/js/details.js"></script>
-    <script src="./assets/js/pokemon-model.js"></script>
-    <script src="./assets/js/poke-api.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/details.js"></script>
 </body>
 
 </html>

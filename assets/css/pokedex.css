@@ -146,6 +146,39 @@
     border-radius: 1rem;
 }
 
+.modal .type{
+    font-size: 20px;
+}
+.modal ol{
+    list-style: none;
+    align-self: flex-start;
+}
+#modalpoke{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: rgb(158, 36, 36) 2px solid;
+    width: 500px;
+    margin: auto;
+}
+#modalpoke .type {
+    width: fit-content;
+}
+#modalpoke .types{
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+}
+#modalpoke .types li {
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 1rem;
+}
+#modalpoke span{
+    font-size: 2rem;
+}  
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
