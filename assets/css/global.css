@@ -4,14 +4,24 @@
 }
 
 body {
-    background-image: url(/js-developer-pokedex-main/assets/imgs/bg.png);
+    background-image: url(/assets/imgs/bg.png);
+    background-attachment: fixed;
+}
+h1{
+    color: #fff;
+    text-shadow: 0 2px 4px black;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 10px;
+    font-size: 4.5em;
+    margin: 10px 0 50px
 }
 
 .content {
+    text-align: center;
     width: 100vw;
     height: 100vh; 
     padding: 1rem;
-    background-color: #fff;
+    background: linear-gradient(180deg, rgb(84 79 80 / 44%) 20%, rgba(203,66,19,0.4163866230085784) 100%);
 }
 .content .closeButton{
     display: none;
@@ -42,9 +52,11 @@ body {
 .pokemon-btn:hover{
     cursor: pointer;
     color: #fff;
+    text-decoration: underline;
 }
 .pokemon-btn{
     width: max-content;
+    color: rgb(46, 43, 43);
 }
 .content .poke-details-text{
     display: none;
@@ -132,8 +144,8 @@ body {
     }
 }
 
-@media screen and (min-width: 576px){
+/* @media screen and (min-width: 576px){
     body{
         background-color: black;
     }
-}
+} */
