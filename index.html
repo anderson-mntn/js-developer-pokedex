@@ -37,10 +37,83 @@
         </div>
     </section>
 
+
+
+
+
+    <style>
+        .pokemon-btn:hover{
+            background-color: red;
+        }
+    </style>
+
+    
+
+    <!-- <style>
+.pokemon-btn{
+    height: 20px;
+    width: 40;
+    background-color: red;
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-pokemon{
+    text-align: center;
+    background-color: #fff;
+    width: 200px;
+    height: 300px;
+    position:relative;
+    border-radius: 1rem;
+
+}
+.closeButton{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px 4px grey;
+}
+.modal.mostrar{
+    display: flex;
+}
+    </style> -->
+
+
+    <div class="modal">
+        <div class="modal-pokemon">Pokemon com detalhesss
+            <input type="button" value="X" class="closeButton">
+        </div>
+        
+    </div>
+
+    <!-- <script>
+        document.addEventListener('click', function(e){
+            console.log(e.target);
+        })
+    </script> -->
+
+
+
     <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/details.js"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

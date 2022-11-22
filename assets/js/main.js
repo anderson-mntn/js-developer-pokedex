@@ -19,9 +19,16 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
+            <div class="pokemon-btn">More detais</div>
         </li>
     `
 }
+// let detailBtn = document.querySelectorAll(".pokemon-btn")
+// detailBtn.addEventListener('click', showDetails)
+// function showDetails(){
+//     console.log("detalhes");
+// }
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
