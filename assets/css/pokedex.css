@@ -211,6 +211,9 @@
         width: 320px;
         margin: 20px auto;
     }
+    .modal .detail img{
+        height: 150px;
+    }
 }
 @media screen and  (max-width: 380px){
     .pokemons{
