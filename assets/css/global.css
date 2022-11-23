@@ -40,6 +40,9 @@ h1{
 #modalpoke {
     font-size: 2rem;
 }
+#modalpoke .type{
+    filter: brightness(0.9)
+}
 .modal .main-stats{
     display: flex;
     flex-direction: column;
@@ -82,7 +85,7 @@ h1{
     margin: 5px;
 }
 .modal .type{
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 .modal ol{
     list-style: none;
@@ -97,7 +100,6 @@ h1{
     width: 500px;
     margin: auto;
     border-radius: 1rem;
-    background-color: #fff;
     padding: 1rem;
 }
 #modalpoke .type {
@@ -109,10 +111,11 @@ h1{
     padding-inline-start: 0;
 }
 #modalpoke .types li {
+    color: #fff;
     text-align: center;
     margin: auto;
-    padding: 5px;
-    border-radius: 1rem;
+    padding: 10px;
+    border-radius: 1.5rem;
 }
 
 .modal .detail .types li{
