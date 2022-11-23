@@ -12,16 +12,15 @@ h1{
     text-shadow: 0 2px 4px black;
     font-family: 'Pokemon Solid', sans-serif;
     letter-spacing: 10px;
-    font-size: 4.5em;
-    margin: 10px 0 50px
+    font-size: 4rem;
+    margin-top: -10px;
 }
 
 .content {
     text-align: center;
     width: 100vw;
     height: 100vh; 
-    padding: 1rem;
-    background: linear-gradient(180deg, rgb(84 79 80 / 44%) 20%, rgba(203,66,19,0.4163866230085784) 100%);
+    padding: 3rem;
 }
 .content .closeButton{
     display: none;
@@ -40,14 +39,14 @@ h1{
     position: fixed;
     top: 0;
     right: 0; 
+    text-align: center;
 }
-#modalpoke {
-    font-size: 2rem;
-}
+
 #modalpoke .type{
     filter: brightness(0.9)
 }
 .modal .main-stats{
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -76,7 +75,7 @@ h1{
     display: none;
 }
 .modal .detail img{
-    width: 260px;
+    width: 80%;
     max-height: 300px;
 }
 #modal-id{
@@ -84,7 +83,6 @@ h1{
 }
 .main-stats{
     list-style: none;
-    width: 90%;
 }
 .main-stats li{
     margin: 5px;
@@ -102,10 +100,12 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    margin: auto;
+    width: 550px;
+    margin: 30px auto;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 5px;
+    font-size: 2rem;
+    
 }
 #modalpoke .type {
     width: fit-content;
@@ -142,18 +142,3 @@ h1{
 }
 
 
-
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-}
-
-/* @media screen and (min-width: 576px){
-    body{
-        background-color: black;
-    }
-} */
