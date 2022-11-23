@@ -212,7 +212,7 @@
         margin: 20px auto;
     }
     .modal .detail img{
-        height: 150px;
+        max-height: 90px;
     }
 }
 @media screen and  (max-width: 380px){
