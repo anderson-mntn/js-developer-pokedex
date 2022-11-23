@@ -60,6 +60,7 @@ h1{
 .pokemon-btn{
     width: max-content;
     color: rgb(46, 43, 43);
+    font-size: 0.9rem;
 }
 .content .poke-details-text{
     display: none;
