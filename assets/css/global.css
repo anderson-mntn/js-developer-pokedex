@@ -29,6 +29,10 @@ h1{
 .content .main-stats{
     display: none;
 }
+#loadMoreButton:hover{
+    cursor: pointer;
+    filter: brightness(0.9)
+}
 .modal{
     width: 100vw;
     height: 100vh;
