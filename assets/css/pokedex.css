@@ -184,6 +184,9 @@
     #modalpokemon{
         max-width: auto;
     }
+    .content{
+        padding: 1rem;
+    }
     
 }
 @media screen and  (max-width: 992px) {
@@ -194,6 +197,7 @@
         height: auto;
         margin: 0;
         border-radius: 1rem;
+        padding: 1rem;
     }
     #modalpoke{
        width: 350px 
