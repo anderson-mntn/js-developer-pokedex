@@ -20,7 +20,7 @@ h1{
     text-align: center;
     width: 100vw;
     height: 100vh; 
-    padding: 3rem;
+    padding: 1rem 6rem;
 }
 .content .closeButton{
     display: none;
