@@ -13,19 +13,18 @@ h1{
     font-family: 'Pokemon Solid', sans-serif;
     letter-spacing: 10px;
     font-size: 4rem;
-    margin-top: -10px;
+    margin-top: 5px;
 }
 
 .content {
     text-align: center;
     width: 100vw;
     height: 100vh; 
-    padding: 1rem 6rem;
+    padding: 1rem 2rem;
+    max-width: 1120px;
+    margin: auto;
 }
-.content .closeButton{
-    display: none;
-}
-.content .main-stats{
+.content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
     display: none;
 }
 #loadMoreButton:hover{
@@ -65,15 +64,11 @@ h1{
     color: rgb(46, 43, 43);
     font-size: 0.9rem;
 }
-.content .poke-details-text{
-    display: none;
-}
+
 .modal .poke-details-text{
     display: flex;
 }
-.modal #btn-pokedetails{
-    display: none;
-}
+
 .modal .detail img{
     width: 80%;
     max-height: 300px;
@@ -100,12 +95,12 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 550px;
-    margin: 30px auto;
+    width: fit-content;
+    margin: 50px auto;
     border-radius: 1rem;
-    padding: 5px;
+    padding: 2rem 6rem;
     font-size: 2rem;
-    
+    height: fit-content;
 }
 #modalpoke .type {
     width: fit-content;
@@ -141,4 +136,45 @@ h1{
     font-size: 1.25rem;
 }
 
-
+@media only screen and (max-width: 992px){
+    .content{
+        height: auto;
+        margin: 0 auto;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 650px){
+    .content{
+        height: auto;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    #modalpoke{
+        width: 60%;
+        height: fit-content;
+        margin: 30px auto;
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 410px){
+    .content{
+        height: auto;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    #modalpoke{
+        width: fit-content;
+        height: fit-content;
+        margin: 1rem 2rem;
+        padding: 1rem;
+    }
+    .modal .detail img{
+        width: 50%;
+    }
+    .modal span, .modal .detail, .modal .type{
+        font-size: 1.25rem;
+    }
+}
