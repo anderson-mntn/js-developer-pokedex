@@ -162,7 +162,6 @@
 @media only screen and (max-width: 410px){
     .pokemons{
         grid-template-columns: 1fr;
-        margin: 0;
         padding: 0;
     }
 }
