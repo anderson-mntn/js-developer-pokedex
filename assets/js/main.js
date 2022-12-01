@@ -23,7 +23,8 @@ function convertPokemonToLi(pokemon) {
             <ul class="main-stats">
                 <li>Weight: <span>${pokemon.weight / 10} kg</span></li>
                 <li>Height: <span>${pokemon.height / 10} m</span></li>
-                <li>Main Move: <span>${pokemon.mainmove}</span></li>
+                <li>Main move: <span>${pokemon.mainmove}</span></li>
+                <li>Ability: <span>${pokemon.abi}</span></li>
             </ul>
             <input type="button" value="X" class="closeButton" id="closeBtn">
 

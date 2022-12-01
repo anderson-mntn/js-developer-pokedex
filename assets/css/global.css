@@ -136,6 +136,10 @@ h1{
     font-size: 1.25rem;
 }
 
+.main-stats{
+    text-transform: capitalize;
+}
+
 @media only screen and (max-width: 992px){
     .content{
         height: auto;
