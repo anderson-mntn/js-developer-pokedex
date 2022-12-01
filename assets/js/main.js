@@ -67,6 +67,7 @@ document.addEventListener('click', function(e){
         pokeLi.innerHTML = pokeActual.innerHTML
         let pokeClass = pokeActual.classList[1]
         pokeLi.classList = pokeClass
+        pokeLi.classList.add("mostrar")
         console.log(pokeClass);
     }
 

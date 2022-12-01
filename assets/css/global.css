@@ -31,6 +31,11 @@ h1{
     cursor: pointer;
     filter: brightness(0.9)
 }
+.pokemons li:hover{
+    -webkit-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+}
 .modal{
     width: 100vw;
     height: 100vh;
@@ -98,7 +103,7 @@ h1{
     width: fit-content;
     margin: 50px auto;
     border-radius: 1rem;
-    padding: 2rem 6rem;
+    padding: 2rem 6rem 0.25rem;
     font-size: 2rem;
     height: fit-content;
 }
@@ -138,6 +143,20 @@ h1{
 
 .main-stats{
     text-transform: capitalize;
+}
+
+@keyframes mostrarModal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.mostrar {
+    animation: mostrarModal 0.25s
 }
 
 @media only screen and (max-width: 992px){
