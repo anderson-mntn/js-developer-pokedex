@@ -15,20 +15,13 @@ h1{
     font-size: 4rem;
     margin-top: 5px;
 }
-h3{
-    text-decoration: wavy;
-}
-
-.toggle-stats{
-    display: none; 
-}
 
 .content {
     text-align: center;
     width: 100vw;
-    height: auto; 
+    height: 100vh; 
     padding: 1rem 2rem;
-    max-width: 1300px;
+    max-width: 1120px;
     margin: auto;
 }
 .content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
@@ -43,14 +36,6 @@ h3{
     -moz-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
 }
-
-.poke-img{
-    max-width: 130px;
-}
-.modal .poke-img{
-    margin: auto;
-    text-align: center;
-}
 .modal{
     width: 100vw;
     height: 100vh;
@@ -59,7 +44,6 @@ h3{
     top: 0;
     right: 0; 
     text-align: center;
-    padding: 2rem;
 }
 
 #modalpoke .type{
@@ -91,9 +75,8 @@ h3{
 }
 
 .modal .detail img{
-    width: 100%;
+    width: 80%;
     max-height: 300px;
-    margin: auto;
 }
 #modal-id{
     display: none;
@@ -109,6 +92,7 @@ h3{
 }
 .modal ol{
     list-style: none;
+    align-self: flex-start;
 }
 #modalpoke{
     position: relative;
@@ -117,7 +101,7 @@ h3{
     justify-content: center;
     align-items: center;
     width: fit-content;
-    margin: 2rem auto;
+    margin: 50px auto;
     border-radius: 1rem;
     padding: 2rem 6rem 0.25rem;
     font-size: 2rem;
@@ -134,7 +118,7 @@ h3{
 #modalpoke .types li {
     color: #fff;
     text-align: center;
-    margin: 0 1rem;
+    margin: auto;
     padding: 10px;
     border-radius: 1.5rem;
 }
@@ -182,9 +166,6 @@ h3{
         border-radius: 1rem;
         padding: 1rem;
     }
-    .modal{
-        text-align: center;
-    }
 }
 @media only screen and (max-width: 650px){
     .content{
@@ -194,9 +175,10 @@ h3{
         font-size: 3rem;
     }
     #modalpoke{
-        width: fit-content;
+        width: 60%;
         height: fit-content;
-        padding: 2rem auto;
+        margin: 30px auto;
+        padding: 1rem;
     }
 }
 @media only screen and (max-width: 410px){
@@ -207,11 +189,13 @@ h3{
         font-size: 2rem;
     }
     #modalpoke{
-        padding: 2rem auto;
-        margin: 2rem auto;
+        width: fit-content;
+        height: fit-content;
+        margin: 1rem auto;
+        padding: 1rem;
     }
     .modal .detail img{
-        width: 100%;
+        width: 50%;
     }
     .modal span, .modal .detail, .modal .type{
         font-size: 1.25rem;
