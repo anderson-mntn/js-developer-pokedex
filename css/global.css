@@ -223,7 +223,7 @@ h3{
         padding: 1rem;
     }
     .modal .detail img{
-        width: 50%;
+        width: 80%;
     }
     .modal span, .modal .detail, .modal .type{
         font-size: 1.25rem;
