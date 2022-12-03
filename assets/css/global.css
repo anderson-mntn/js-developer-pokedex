@@ -18,17 +18,11 @@ h1{
 h3{
     text-decoration: wavy;
 }
+
 .toggle-stats{
-    /* text-align: center; */
-    display: flex;
-    flex-direction: row;
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-bottom: .5rem;
-    /* justify-content: center; */
-    /* align-items: center; */
+    display: none; 
 }
+
 .content {
     text-align: center;
     width: 100vw;
@@ -54,8 +48,6 @@ h3{
     max-width: 130px;
 }
 .modal .poke-img{
-    max-width: none;
-    width: 80%;
     margin: auto;
     text-align: center;
 }
@@ -67,6 +59,7 @@ h3{
     top: 0;
     right: 0; 
     text-align: center;
+    padding: 2rem;
 }
 
 #modalpoke .type{
@@ -115,9 +108,7 @@ h3{
     font-size: 1.2rem;
 }
 .modal ol{
-    /* text-align: center; */
     list-style: none;
-    /* align-self: center; */
 }
 #modalpoke{
     position: relative;
@@ -126,7 +117,7 @@ h3{
     justify-content: center;
     align-items: center;
     width: fit-content;
-    margin: 50px auto;
+    margin: 2rem auto;
     border-radius: 1rem;
     padding: 2rem 6rem 0.25rem;
     font-size: 2rem;
@@ -143,7 +134,7 @@ h3{
 #modalpoke .types li {
     color: #fff;
     text-align: center;
-    margin: auto;
+    margin: 0 1rem;
     padding: 10px;
     border-radius: 1.5rem;
 }
@@ -191,6 +182,9 @@ h3{
         border-radius: 1rem;
         padding: 1rem;
     }
+    .modal{
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 650px){
     .content{
@@ -200,10 +194,9 @@ h3{
         font-size: 3rem;
     }
     #modalpoke{
-        width: 60%;
+        width: fit-content;
         height: fit-content;
-        margin: 30px auto;
-        padding: 1rem;
+        padding: 2rem auto;
     }
 }
 @media only screen and (max-width: 410px){
@@ -214,13 +207,11 @@ h3{
         font-size: 2rem;
     }
     #modalpoke{
-        width: fit-content;
-        height: fit-content;
-        margin: 1rem 2rem;
-        padding: 1rem;
+        padding: 2rem auto;
+        margin: 2rem auto;
     }
     .modal .detail img{
-        width: 50%;
+        width: 100%;
     }
     .modal span, .modal .detail, .modal .type{
         font-size: 1.25rem;

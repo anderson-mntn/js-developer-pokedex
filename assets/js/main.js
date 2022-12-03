@@ -21,15 +21,15 @@ function convertPokemonToLi(pokemon) {
                 </div>     
             </div>
             <div class="pokemon-btn" id="btn-pokedetails">More details</div>
-            <ul class="main-stats">
             <ol class="toggle-stats">
             <li>Attributes</li>
             
             </ol>
-            <li>Weight: <span>${pokemon.weight / 10} kg</span></li>
-                <li>Height: <span>${pokemon.height / 10} m</span></li>
-                <li>Main move: <span>${pokemon.mainmove}</span></li>
-                <li>Ability: <span>${pokemon.abi}</span></li>
+            <ul class="main-stats">
+            <li>Weight: ${pokemon.weight / 10}kg</li>
+                <li>Height: ${pokemon.height / 10}m</li>
+                <li>Main move: ${pokemon.mainmove}</li>
+                <li>Ability: ${pokemon.abi}</li>
             </ul>
             <input type="button" value="X" class="closeButton" id="closeBtn">
 
