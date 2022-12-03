@@ -15,13 +15,19 @@ function convertPokemonToLi(pokemon) {
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
-
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <div class="poke-img">
+                    <img src="${pokemon.photo}"
+                        alt="${pokemon.name}">
+                </div>     
             </div>
-            <div class="pokemon-btn " id="btn-pokedetails">More details</div>
+            <div class="pokemon-btn" id="btn-pokedetails">More details</div>
             <ul class="main-stats">
-                <li>Weight: <span>${pokemon.weight / 10} kg</span></li>
+            <ol class="toggle-stats">
+            <li>Attributes</li>
+            <li>Stats</li>
+            <li>History</li>
+            </ol>
+            <li>Weight: <span>${pokemon.weight / 10} kg</span></li>
                 <li>Height: <span>${pokemon.height / 10} m</span></li>
                 <li>Main move: <span>${pokemon.mainmove}</span></li>
                 <li>Ability: <span>${pokemon.abi}</span></li>
@@ -68,13 +74,10 @@ document.addEventListener('click', function(e){
         let pokeClass = pokeActual.classList[1]
         pokeLi.classList = pokeClass
         pokeLi.classList.add("mostrar")
-        console.log(pokeClass);
     }
-
     if(e.target.id == "closeBtn"){
         modal.style.display = "none"
     } 
-
 })
 
 

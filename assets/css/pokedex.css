@@ -90,13 +90,14 @@
     color: #000;
     opacity: .3;
     text-align: right;
-    font-size: .625rem;
+    font-size: 1rem;
 }
 
 .pokemon .name {
     text-transform: capitalize;
     color: #fff;
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
 }
 
 .pokemon .detail {
@@ -123,8 +124,10 @@
 }
 
 .pokemon .detail img {
-    max-width: 100%;
-    height: 70px;
+    text-shadow: 1px black;
+    width: 100px;
+    height: 100px;
+    margin: 0.5rem;
 }
 
 .pagination {

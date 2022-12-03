@@ -15,13 +15,23 @@ h1{
     font-size: 4rem;
     margin-top: 5px;
 }
-
+h3{
+    text-decoration: wavy;
+}
+.toggle-stats{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: .5rem;
+}
 .content {
     text-align: center;
     width: 100vw;
-    height: 100vh; 
+    height: auto; 
     padding: 1rem 2rem;
-    max-width: 1120px;
+    max-width: 1300px;
     margin: auto;
 }
 .content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
@@ -35,6 +45,10 @@ h1{
     -webkit-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+}
+
+.poke-img{
+    max-width: 130px;
 }
 .modal{
     width: 100vw;
