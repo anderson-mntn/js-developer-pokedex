@@ -19,12 +19,15 @@ h3{
     text-decoration: wavy;
 }
 .toggle-stats{
+    /* text-align: center; */
     display: flex;
     flex-direction: row;
     font-size: 1.25rem;
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: .5rem;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 .content {
     text-align: center;
@@ -49,6 +52,12 @@ h3{
 
 .poke-img{
     max-width: 130px;
+}
+.modal .poke-img{
+    max-width: none;
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
 .modal{
     width: 100vw;
@@ -89,8 +98,9 @@ h3{
 }
 
 .modal .detail img{
-    width: 80%;
+    width: 100%;
     max-height: 300px;
+    margin: auto;
 }
 #modal-id{
     display: none;
@@ -105,8 +115,9 @@ h3{
     font-size: 1.2rem;
 }
 .modal ol{
+    /* text-align: center; */
     list-style: none;
-    align-self: flex-start;
+    /* align-self: center; */
 }
 #modalpoke{
     position: relative;

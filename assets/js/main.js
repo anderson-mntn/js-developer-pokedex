@@ -24,8 +24,7 @@ function convertPokemonToLi(pokemon) {
             <ul class="main-stats">
             <ol class="toggle-stats">
             <li>Attributes</li>
-            <li>Stats</li>
-            <li>History</li>
+            
             </ol>
             <li>Weight: <span>${pokemon.weight / 10} kg</span></li>
                 <li>Height: <span>${pokemon.height / 10} m</span></li>
@@ -37,6 +36,8 @@ function convertPokemonToLi(pokemon) {
         </li>
     `
 }
+// <li>Stats</li>
+// <li>History</li>
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
