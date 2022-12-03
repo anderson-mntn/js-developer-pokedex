@@ -191,6 +191,9 @@ h3{
         border-radius: 1rem;
         padding: 1rem;
     }
+    .modal{
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 650px){
     .content{
@@ -202,7 +205,7 @@ h3{
     #modalpoke{
         width: 60%;
         height: fit-content;
-        margin: 30px auto;
+        margin:auto;
         padding: 1rem;
     }
 }
@@ -219,7 +222,6 @@ h3{
     #modalpoke{
         width: fit-content;
         height: fit-content;
-        margin: auto;
         padding: 1rem;
     }
     .modal .detail img{
