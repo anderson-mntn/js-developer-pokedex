@@ -15,9 +15,6 @@ h1{
     font-size: 4rem;
     margin-top: 5px;
 }
-h3{
-    text-decoration: wavy;
-}
 .toggle-stats{
     /* text-align: center; */
     display: flex;
