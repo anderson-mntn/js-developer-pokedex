@@ -21,7 +21,7 @@ h1{
     width: 100vw;
     height: 100vh; 
     padding: 1rem 2rem;
-    max-width: 1120px;
+    max-width: 1270px;
     margin: auto;
 }
 .content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
@@ -100,7 +100,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 500px;
     margin: 50px auto;
     border-radius: 1rem;
     padding: 2rem 6rem 0.25rem;
@@ -175,7 +175,7 @@ h1{
         font-size: 3rem;
     }
     #modalpoke{
-        width: 60%;
+        width: 80%;
         height: fit-content;
         margin: 30px auto;
         padding: 1rem;
@@ -186,12 +186,12 @@ h1{
         height: auto;
     }
     h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     #modalpoke{
         width: fit-content;
         height: fit-content;
-        margin: 1rem auto;
+        margin: 2rem auto;
         padding: 1rem;
     }
     .modal .detail img{
