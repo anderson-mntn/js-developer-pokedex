@@ -100,7 +100,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 480px;
     margin: 50px auto;
     border-radius: 1rem;
     padding: 2rem 6rem 0.25rem;
@@ -191,7 +191,7 @@ h1{
     #modalpoke{
         width: fit-content;
         height: fit-content;
-        margin: 2rem auto;
+        margin: auto;
         padding: 1rem;
     }
     .modal .detail img{
