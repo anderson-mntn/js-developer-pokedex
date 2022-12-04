@@ -24,7 +24,7 @@ h1{
     max-width: 1270px;
     margin: auto;
 }
-.content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
+.content .poke-stats, .content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
     display: none;
 }
 #loadMoreButton:hover{
@@ -40,8 +40,8 @@ h1{
     display: flex;
     width: 300px;
     height: 300px;
-    box-shadow: 0px 2px 40px -11px inset rgb(0 0 0 / 42%);
-    border-radius: 1.5rem;
+    box-shadow: 0px 0px 30px -11px inset rgb(0 0 0 / 40%);
+    border-radius: 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -70,9 +70,10 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: 1rem;
+    font-size: 1.15rem;
     margin: 0 auto 1rem;
     border-radius: 1rem;
+    min-height: 159px;
 }
 .modal .main-stats li span{
     font-size: 1rem;
@@ -157,11 +158,55 @@ h1{
 .main-stats{
     text-transform: capitalize;
 }
+.modal .main-stats{
+    display: none;
+}
+.modal .poke-stats li{
+    margin: 0.25rem;
+    text-align: left;
+}
+.modal .poke-stats{
+    display: grid;
+    grid-template-columns: 0.3fr 0.2fr 1fr;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 0 1rem;
+    padding: 0 1rem;
+    width: 100%;
+}
+.poke-bar{
+    background-color: rgb(56, 55, 55);
+    border-radius: 1rem;
+}
+.bar{
+    border-radius: inherit;
+}
+
+.bar-hp{
+    background-color: green;
+    transition: width 2s;
+}
+.bar-atk{
+    background-color: rgb(231 21 21);
+}
+.bar-def{
+    background-color: #d66b13;
+}
+.bar-satk{
+    background-color: rgb(173, 5, 5);
+}
+.bar-sdef{
+    background-color: rgb(204, 16, 204);
+}
+.bar-spd{
+    background-color: royalblue;
+}
+
 
 @keyframes mostrarModal{
     from{
         opacity: 0;
-        transform: translate3d(0, -40px, 0);
+        transform: translate3d(0, -30px, 0);
     }
     to{
         opacity: 1;
@@ -182,18 +227,30 @@ h1{
 }
 .modal .stats-board li{
     width: auto;
-    padding: 0 .5rem;
-    margin: 0 auto;
+    padding: .5rem .75rem;
+    margin: 0 0.25rem;
+    /* border: black solid 1px; */
+    border-radius: 1.25rem;
+    background-color: #0000002e;
 }
 .stats-board li:enabled{
     text-decoration: underline;
 }
 .mostrar {
-    animation: mostrarModal 0.35s
+    animation: mostrarModal 0.25s
 }
 .modal .detail{
     width: 100%;
 }
+.poke-stats{
+    /* text-align: left; */
+    list-style: none;
+}
+.modal .poke-span-hp{
+    width: 100%;
+    background-color: green;
+}
+
 
 @media only screen and (max-width: 992px){
     .content{
@@ -215,6 +272,9 @@ h1{
         height: fit-content;
         margin: 30px auto;
         padding: 1rem;
+    }
+    .modal .poke-img {
+        margin: auto;
     }
 }
 @media only screen and (max-width: 410px){

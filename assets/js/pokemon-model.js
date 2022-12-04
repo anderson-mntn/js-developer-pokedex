@@ -9,6 +9,12 @@ class Pokemon {
     height; // vezes 10 = gramas
     mainmove;
     abi;
+    hp;
+    atk;
+    def;
+    spcatk;
+    spcdef;
+    speed;
 
 
 }

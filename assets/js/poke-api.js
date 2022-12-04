@@ -17,6 +17,12 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.height = pokeDetail.height
     pokemon.mainmove = pokeDetail.moves[0].move.name
     pokemon.abi = pokeDetail.abilities[0].ability.name
+    pokemon.hp = pokeDetail.stats[0].base_stat
+    pokemon.atk = pokeDetail.stats[1].base_stat
+    pokemon.def = pokeDetail.stats[2].base_stat
+    pokemon.spcatk = pokeDetail.stats[3].base_stat
+    pokemon.spcdef = pokeDetail.stats[4].base_stat
+    pokemon.speed = pokeDetail.stats[5].base_stat
 
 
     return pokemon

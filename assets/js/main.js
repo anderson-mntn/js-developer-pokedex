@@ -21,8 +21,8 @@ function convertPokemonToLi(pokemon) {
             </div>
             <div class="pokemon-btn" id="btn-pokedetails">More details</div>
             <ul class="stats-board">
+                <li id="board-att-li">Stats</li>
                 <li>Attributes</li>
-                <li>Stats</li>
                 <li>Story</li>
             </ul>
             <ul class="main-stats">
@@ -30,6 +30,14 @@ function convertPokemonToLi(pokemon) {
                 <li>Height: ${pokemon.height / 10}m</li>
                 <li>Main move: ${pokemon.mainmove}</li>
                 <li>Ability: ${pokemon.abi}</li>
+            </ul>
+            <ul class="poke-stats">
+                <li>HP</li> <li >${pokemon.hp}</li> <li class="poke-bar"><div class="bar-hp bar" style="width: ${pokemon.hp}%">&nbsp;</div></li>
+                <li>ATK</li> <li >${pokemon.atk}</li> <li class="poke-bar"><div class="bar-atk bar" style="width: ${pokemon.atk}%">&nbsp;</div></li>
+                <li>DEF</li> <li >${pokemon.def}</li> <li class="poke-bar"><div class="bar-def bar" style="width: ${pokemon.def}%">&nbsp;</div></li>
+                <li>SATK</li> <li >${pokemon.spcatk}</li> <li class="poke-bar"><div class="bar-satk bar" style="width: ${pokemon.spcatk}%">&nbsp;</div></li>
+                <li>SDEF</li> <li >${pokemon.spcdef}</li> <li class="poke-bar"><div class="bar-sdef bar" style="width: ${pokemon.spcdef}%">&nbsp;</div></li>
+                <li>SPD</li> <li >${pokemon.speed}</li> <li class="poke-bar" ><div class="bar-spd bar" style="width: ${pokemon.speed}%">&nbsp;</div></li>
             </ul>
             <input type="button" value="X" class="closeButton" id="closeBtn">
 
@@ -67,6 +75,8 @@ let modal = document.querySelector('#modal-id')
 let closeModalBtn = document.querySelector('#closeBtn')
 
 document.addEventListener('click', function(e){
+    
+
     if(e.target.innerText == "More details"){
         modal.style.display = "flex"
         let pokeActual = e.target.parentElement
@@ -78,8 +88,24 @@ document.addEventListener('click', function(e){
     }
     if(e.target.id == "closeBtn"){
         modal.style.display = "none"
-    } 
+    }
+    if(e.target.innerHTML == "Attributes"){
+        let attUlMainStats = document.querySelector(".modal .main-stats")
+        let pokeStatsUl = document.querySelector(".modal .poke-stats")
+        attUlMainStats.style.display = "flex"
+        pokeStatsUl.style.display = "none"
+        
+    }
+    if(e.target.innerHTML == "Stats"){
+        let attUlMainStats = document.querySelector(".modal .main-stats")
+        let pokeStatsUl = document.querySelector(".modal .poke-stats")
+        attUlMainStats.style.display = "none"
+        pokeStatsUl.style.display = "grid"
+    }
 })
 
 
-   
+// attributes - stats - story : display
+
+//Selectors
+
