@@ -161,7 +161,7 @@ h1{
 @keyframes mostrarModal{
     from{
         opacity: 0;
-        transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -40px, 0);
     }
     to{
         opacity: 1;
@@ -189,7 +189,7 @@ h1{
     text-decoration: underline;
 }
 .mostrar {
-    animation: mostrarModal 0.25s
+    animation: mostrarModal 0.35s
 }
 .modal .detail{
     width: 100%;
