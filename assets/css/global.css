@@ -34,7 +34,23 @@ h1{
 .pokemons li:hover{
     -webkit-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 40px -11px  rgba(0,0,0,0.75);
+}
+.modal .poke-img{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    -webkit-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 40px -11px inset rgba(0,0,0,0.75);
+    border-radius: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.modal .poke-img img{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
 }
 .modal{
     width: 100vw;
@@ -50,11 +66,15 @@ h1{
     filter: brightness(0.9)
 }
 .modal .main-stats{
-    padding: 0;
+    width: 100%;
+    border: dashed grey 2px;
+    padding: .5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-size: 1rem;
+    margin: 0 auto 1rem;
+    border-radius: 1rem;
 }
 .modal .main-stats li span{
     font-size: 1rem;
@@ -74,10 +94,6 @@ h1{
     display: flex;
 }
 
-.modal .detail img{
-    width: 80%;
-    max-height: 300px;
-}
 #modal-id{
     display: none;
 }
@@ -100,8 +116,8 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 480px;
-    margin: 50px auto;
+    width: 500px;
+    margin: auto;
     border-radius: 1rem;
     padding: 2rem 6rem 0.25rem;
     font-size: 2rem;
@@ -122,7 +138,6 @@ h1{
     padding: 10px;
     border-radius: 1.5rem;
 }
-
 .modal .detail .types li{
     width: auto;
     justify-content: center;
@@ -154,6 +169,28 @@ h1{
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+}
+.content .stats-board{
+    display: none;
+}
+.modal .stats-board{
+    list-style: none;
+    display: flex;
+    /* background: white; */
+    font-size: 1.25rem;
+    font-weight: 600;
+    flex-direction: row;
+    padding: 0;
+}
+.modal .stats-board li{
+    width: max-content;
+    padding: 0 .5rem;
+    /* overflow: hidden; */
+    /* background: lightblue; */
+    margin: 0;
+}
+.stats-board li:active{
+    text-decoration: underline;
 }
 .mostrar {
     animation: mostrarModal 0.25s
@@ -189,8 +226,9 @@ h1{
         font-size: 2.5rem;
     }
     #modalpoke{
+        width: fit-content;
         height: fit-content;
-        margin: auto;
+        margin: 2rem auto;
         padding: 1rem;
     }
     .modal .detail img{
@@ -198,5 +236,17 @@ h1{
     }
     .modal span, .modal .detail, .modal .type{
         font-size: 1.25rem;
+    }
+    .modal .stats-board{
+        font-size: 1rem;
+        width: fit-content;
+    }
+    .modal .poke-img{
+        margin: auto;
+    }
+    .modal .poke-img img{
+        width: 100%;
+        height: 90%;
+        padding: .5rem;
     }
 }
