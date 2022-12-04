@@ -120,7 +120,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 500px;
     margin: 50px auto;
     border-radius: 1rem;
     padding: 2rem 6rem 0.25rem;
@@ -201,7 +201,7 @@ h1{
         font-size: 3rem;
     }
     #modalpoke{
-        width: 60%;
+        width: 80%;
         height: fit-content;
         padding: 1rem;
         margin: 3rem auto;
