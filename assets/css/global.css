@@ -191,6 +191,9 @@ h1{
 .mostrar {
     animation: mostrarModal 0.25s
 }
+.modal .detail{
+    width: 100%;
+}
 
 @media only screen and (max-width: 992px){
     .content{
@@ -241,6 +244,7 @@ h1{
         width: 100%;
         height: fit-content;
         margin: auto;
+        min-height: 240px;
     }
     .modal {
         padding: 1rem;
