@@ -22,8 +22,8 @@ function convertPokemonToLi(pokemon) {
             <div class="pokemon-btn" id="btn-pokedetails">More details</div>
             <ul class="stats-board">
                 <li>Attributes</li>
-                <li>Main Stats</li>
-                <li>Back Story</li>
+                <li>Stats</li>
+                <li>Story</li>
             </ul>
             <ul class="main-stats">
                 <li>Weight: ${pokemon.weight / 10}kg</li>
