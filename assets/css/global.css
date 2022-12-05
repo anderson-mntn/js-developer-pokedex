@@ -291,6 +291,9 @@ h1{
     .modal .poke-img {
         margin: auto;
     }
+    .modal .poke-stats, .modal .main-stats{
+        width: 76%;
+    }
 }
 @media only screen and (max-width: 410px){
     .content{
@@ -324,6 +327,9 @@ h1{
     }
     .modal .poke-stats{
         margin: 0 .25rem;
+    }
+    .modal .poke-stats, .modal .main-stats{
+        width: 100%;
     }
 }
 @media only screen and (max-width: 266px){
