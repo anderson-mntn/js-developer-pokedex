@@ -180,17 +180,25 @@ h1{
     height: 175px;
     margin: 0;
 }
+@keyframes pokeBar {
+    from{
+        width: 0;;
+    }
+    to { 
+        width: content;
+    }
+}
 .poke-bar{
-    background-color: rgb(56 50 50);
+    background-color: rgb(46 41 41);
     border-radius: 1rem;
 }
 .bar{
     border-radius: inherit;
+    animation: pokeBar 1s;
 }
 
 .bar-hp{
     background-color: green;
-    transition: width 2s;
 }
 .bar-atk{
     background-color: rgb(231 21 21);
