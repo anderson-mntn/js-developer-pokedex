@@ -1,0 +1,331 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/assets/imgs/bg.png);
+    background-attachment: fixed;
+}
+h1{
+    color: #fff;
+    text-shadow: 0 2px 4px black;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 10px;
+    font-size: 4rem;
+    margin-top: 5px;
+}
+
+.content {
+    text-align: center;
+    width: 100vw;
+    height: 100vh; 
+    padding: 1rem 2rem;
+    max-width: 1270px;
+    margin: auto;
+}
+.content .poke-stats, .content .closeButton, .content .main-stats, .content .poke-details-text, .modal #btn-pokedetails, #modal-id {
+    display: none;
+}
+#loadMoreButton:hover{
+    cursor: pointer;
+    filter: brightness(0.9)
+}
+.pokemons li:hover{
+    -webkit-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 40px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 40px -11px  rgba(0,0,0,0.75);
+}
+.modal .poke-img{
+    display: flex;
+    width: 270px;
+    height: 240px;
+    box-shadow: 0px 0px 30px -11px inset rgb(0 0 0 / 40%);
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.modal .poke-img img{
+    width: 100%;
+    height: 90%;
+    padding: .5rem;
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .4);
+    position: fixed;
+    top: 0;
+    right: 0; 
+    text-align: center;
+}
+
+#modalpoke .type{
+    filter: brightness(0.9)
+}
+.modal .main-stats{
+    width: 100%;
+    border: dashed grey 2px;
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1rem;
+    margin: 0 auto 0.25rem;
+    border-radius: 1rem;
+    min-height: 159px;
+}
+.modal .main-stats li span{
+    font-size: 1rem;
+}
+.pokemon-btn:hover{
+    cursor: pointer;
+    color: #fff;
+    text-decoration: underline;
+}
+.pokemon-btn{
+    width: max-content;
+    color: rgb(46, 43, 43);
+    font-size: 0.9rem;
+}
+
+.modal .poke-details-text{
+    display: flex;
+}
+
+#modal-id{
+    display: none;
+}
+.main-stats{
+    list-style: none;
+}
+.modal .type{
+    font-size: 1.2rem;
+}
+.modal ol{
+    list-style: none;
+    align-self: flex-start;
+}
+#modalpoke{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 1rem 6rem;
+    height: fit-content;
+    min-height: 650px;
+}
+#modalpoke .type {
+    width: fit-content;
+}
+#modalpoke .types{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+}
+#modalpoke .types li {
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 1.5rem;
+}
+.modal .detail .types li{
+    width: auto;
+    justify-content: center;
+}  
+.modal .closeButton{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px 4px grey;
+    font-size: 1.25rem;
+}
+
+.main-stats{
+    text-transform: capitalize;
+    padding: .12rem auto;
+    margin-bottom: 0;
+}
+.modal .main-stats{
+    display: none;
+}
+.modal .poke-stats li{
+    margin: 4px;
+    text-align: left;
+    font-size: 0.75rem;
+}
+.modal .poke-stats{
+    background: #ffffff14;
+    display: grid;
+    grid-template-columns: 0.3fr 0.2fr 1fr;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 auto .5rem;
+    padding: .75rem 1rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+.poke-bar{
+    background-color: rgb(56 50 50);
+    border-radius: 1rem;
+}
+.bar{
+    border-radius: inherit;
+}
+
+.bar-hp{
+    background-color: green;
+    transition: width 2s;
+}
+.bar-atk{
+    background-color: rgb(231 21 21);
+}
+.bar-def{
+    background-color: #d66b13;
+}
+.bar-satk{
+    background-color: rgb(173, 5, 5);
+}
+.bar-sdef{
+    background-color: rgb(121, 41, 157);
+}
+.bar-spd{
+    background-color: rgb(73, 114, 235);
+}
+.stats-board  li:hover{
+    color: #fff;
+}
+
+@keyframes mostrarModal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.content .stats-board{
+    display: none;
+}
+.modal .stats-board{
+    margin: 1rem;
+    list-style: none;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    flex-direction: row;
+    padding: 0;
+}
+.modal .stats-board li{
+    width: auto;
+    padding: .5rem .75rem;
+    margin: 0 0.25rem;
+    /* border: black solid 1px; */
+    border-radius: 1.25rem;
+    background-color: #0000001c;
+}
+.stats-board li:enabled{
+    text-decoration: underline;
+}
+.mostrar {
+    animation: mostrarModal 0.25s
+}
+.modal .detail{
+    width: 100%;
+}
+.poke-stats{
+    list-style: none;
+}
+.modal .poke-span-hp{
+    width: 100%;
+    background-color: green;
+}
+.modal .name, .modal .number{
+    font-size: 1.5rem;
+}
+.stats-board li:hover {
+    cursor: pointer;
+}
+.modal .stats-li{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 992px){
+    .content{
+        height: auto;
+        margin: 0 auto;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 650px){
+    .content{
+        height: auto;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    #modalpoke{
+        width: 80%;
+        height: fit-content;
+        margin: 30px auto;
+        padding: 1rem;
+    }
+    .modal .poke-img {
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 410px){
+    .content{
+        height: auto;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    #modalpoke{
+        width: 100%;
+        height: min-content;
+        margin: 1rem auto;
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .modal span, .modal .detail, .modal .type{
+        font-size: 1.25rem;
+    }
+    .modal .stats-board{
+        font-size: 1rem;
+        width: auto;
+    }
+    .modal .poke-img{
+        width: 80%;
+        height: 200px;
+        margin: auto;
+    }
+    .modal {
+        padding: 1rem;
+    }
+    .modal .poke-stats{
+        margin: 0 .25rem;
+    }
+}
+@media only screen and (max-width: 266px){
+    .stats-board{
+        margin: 0;
+    }
+}
