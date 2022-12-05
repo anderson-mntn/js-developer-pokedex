@@ -6,6 +6,7 @@ const limit = 12
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
+    // console.log(pokemon.about0);
     return `
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
@@ -23,7 +24,6 @@ function convertPokemonToLi(pokemon) {
             <ul class="stats-board">
                 <li id="board-att-li">Stats</li>
                 <li>Attributes</li>
-                <li>Story</li>
             </ul>
             <ul class="main-stats">
                 <li>Weight: ${pokemon.weight / 10}kg</li>
@@ -40,7 +40,6 @@ function convertPokemonToLi(pokemon) {
                 <li class="stats-li">SPD</li> <li>${pokemon.speed}</li> <li class="poke-bar" ><div class="bar-spd bar" style="width: ${pokemon.speed}%">&nbsp;</div></li>
             </ul>
             <input type="button" value="X" class="closeButton" id="closeBtn">
-
         </li>
     `
 }
@@ -105,7 +104,5 @@ document.addEventListener('click', function(e){
 })
 
 
-// attributes - stats - story : display
 
-//Selectors
 
