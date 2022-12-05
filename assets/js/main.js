@@ -6,7 +6,6 @@ const limit = 12
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
-    // console.log(pokemon.about0);
     return `
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
@@ -43,8 +42,6 @@ function convertPokemonToLi(pokemon) {
         </li>
     `
 }
-// <li>Stats</li>
-// <li>History</li>
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -74,8 +71,6 @@ let modal = document.querySelector('#modal-id')
 let closeModalBtn = document.querySelector('#closeBtn')
 
 document.addEventListener('click', function(e){
-    
-
     if(e.target.innerText == "More details"){
         modal.style.display = "flex"
         let pokeActual = e.target.parentElement
@@ -101,6 +96,7 @@ document.addEventListener('click', function(e){
         attUlMainStats.style.display = "none"
         pokeStatsUl.style.display = "grid"
     }
+   
 })
 
 

@@ -218,6 +218,14 @@ h1{
 .stats-board  li:hover{
     color: #fff;
 }
+footer{
+    font-size: 1rem;
+    position: fixed;
+    top: 9px;
+    right: 9px;
+    text-align: center;
+    color: #fff;
+}
 
 @keyframes mostrarModal{
     from{
@@ -282,6 +290,9 @@ h1{
         border-radius: 1rem;
         padding: 1rem;
     }
+    footer{
+        font-size: 0.75rem;
+    }
 }
 @media only screen and (max-width: 650px){
     .content{
@@ -301,6 +312,9 @@ h1{
     }
     .modal .poke-stats, .modal .main-stats{
         width: 76%;
+    }
+    footer{
+        display: none;
     }
 }
 @media only screen and (max-width: 410px){
