@@ -194,7 +194,7 @@ h1{
 }
 .bar{
     border-radius: inherit;
-    animation: pokeBar 1s;
+    animation: pokeBar 1.5s;
 }
 
 .bar-hp{
