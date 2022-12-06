@@ -1,5 +1,4 @@
-const pokeApi = {}
-var t = 0
+
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
@@ -27,9 +26,10 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.story = arrPoke[t]
     t++
     console.log(pokemon);
-
     return pokemon
 }
+const pokeApi = {}
+var t = 0
 
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
@@ -48,18 +48,18 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
         .then((pokemonsDetails) => pokemonsDetails)
 }
 
+
 let arrPoke = [];
-const fetchPokemon = () => {
-    for(let i = 1; i <= 30; i++){
-    const url = `https://pokeapi.co/api/v2/pokemon-species/${i}/`
-        fetch(url)
-        .then(res => res.json())
-        .then(pokemon => {pokest = pokemon.flavor_text_entries.filter(item => (item.language.name == "en"))
-        aboutArrItem = pokest[i].flavor_text
-        arrPoke.push(aboutArrItem)
-        })
-    }
-    return arrPoke
-}
+fetchPokemon = () => {
+        for(let i = 1; i <= 151; i++){
+        const url = `https://pokeapi.co/api/v2/pokemon-species/${i}/`
+            fetch(url)
+            .then(res => res.json())
+            .then(pokemon =>  pokemon.flavor_text_entries.filter(item => (item.language.name == "en")))
+            .then((detailRequests) => Promise.all(detailRequests))
+            .then((text) => {arrPoke.push(text[0].flavor_text)})
+        }
+        return arrPoke
+     }
 fetchPokemon()
 
