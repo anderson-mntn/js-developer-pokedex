@@ -1,5 +1,6 @@
 
 const pokeApi = {}
+fetchPokemon()
 var t = 0
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
@@ -57,11 +58,11 @@ const fetchPokemon = () => {
         .then(res => res.json())
         .then(pokemon => {
         const pokest = pokemon.flavor_text_entries.filter(item => (item.language.name == "en"))
-        aboutArrItem = pokest[i].flavor_text
+        .then(aboutArrItem = pokest[i].flavor_text)
         arrPoke.push(aboutArrItem)
         })
     }
     return arrPoke
 }
-fetchPokemon()
+
 
