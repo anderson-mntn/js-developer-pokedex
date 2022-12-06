@@ -15,5 +15,6 @@ class Pokemon {
     spcatk;
     spcdef;
     speed;
-    about;
+    story;
 }
+

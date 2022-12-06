@@ -5,6 +5,9 @@ const maxRecords = 151
 const limit = 12
 let offset = 0;
 
+var j = 0
+
+
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
@@ -23,6 +26,7 @@ function convertPokemonToLi(pokemon) {
             <ul class="stats-board">
                 <li id="board-att-li">Stats</li>
                 <li>Attributes</li>
+                <li>Story</li> 
             </ul>
             <ul class="main-stats">
                 <li>Weight: ${pokemon.weight / 10}kg</li>
@@ -38,10 +42,14 @@ function convertPokemonToLi(pokemon) {
                 <li class="stats-li">SDEF</li> <li>${pokemon.spcdef}</li> <li class="poke-bar"><div class="bar-sdef bar" style="width: ${pokemon.spcdef}%">&nbsp;</div></li>
                 <li class="stats-li">SPD</li> <li>${pokemon.speed}</li> <li class="poke-bar" ><div class="bar-spd bar" style="width: ${pokemon.speed}%">&nbsp;</div></li>
             </ul>
+            <div class="poke-story">
+            <p>${pokemon.story}</p>
+            </div>
             <input type="button" value="X" class="closeButton" id="closeBtn">
         </li>
     `
 }
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -86,19 +94,38 @@ document.addEventListener('click', function(e){
     if(e.target.innerHTML == "Attributes"){
         let attUlMainStats = document.querySelector(".modal .main-stats")
         let pokeStatsUl = document.querySelector(".modal .poke-stats")
+        let pokeStory = document.querySelector(".modal .poke-story")
         attUlMainStats.style.display = "flex"
         pokeStatsUl.style.display = "none"
+        pokeStory.style.display = "none"
         
     }
     if(e.target.innerHTML == "Stats"){
         let attUlMainStats = document.querySelector(".modal .main-stats")
         let pokeStatsUl = document.querySelector(".modal .poke-stats")
+        let pokeStory = document.querySelector(".modal .poke-story")
         attUlMainStats.style.display = "none"
         pokeStatsUl.style.display = "grid"
+        pokeStory.style.display = "none"
     }
-   
+    if(e.target.innerHTML == "Story"){
+        let attUlMainStats = document.querySelector(".modal .main-stats")
+        let pokeStatsUl = document.querySelector(".modal .poke-stats")
+        let pokeStory = document.querySelector(".modal .poke-story")
+        attUlMainStats.style.display = "none"
+        pokeStatsUl.style.display = "none"
+        pokeStory.style.display = "flex"
+    }
 })
 
 
+//Criar um loop com appendendo child no <p> de story /seu proprio bloco
 
-
+// function appStory (){
+//     for (let index = 0; index < 6; index++) {
+//         let storyApp = document.createElement("p")
+//         storyApp.innerText = fetchPokemon()[index]
+//         console.log(storyApp); 
+//     }
+// }
+// appStory()

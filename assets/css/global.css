@@ -71,7 +71,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: 1rem;
+    font-size: 1.2rem;
     /* margin: 0 auto 0.25rem; */
     border-radius: 1rem;
     /* min-height: 175px; */
@@ -226,7 +226,22 @@ footer{
     text-align: center;
     color: #fff;
 }
+.poke-story{
+    display: none;
+}
+.modal .poke-story{
+    display: none;
+    text-align: left;
+    font-size: 1.25rem;
+    height: 175px;
+    border-radius: 1rem;
+    background-color: rgba(128, 128, 128, 0.26);
+    align-items: center;
 
+}.modal .poke-story p{
+    padding: 0 1rem;
+
+}
 @keyframes mostrarModal{
     from{
         opacity: 0;
@@ -278,6 +293,7 @@ footer{
 }
 .stats-board li:hover {
     cursor: pointer;
+    background-color: #00000049;
 }
 .modal .stats-li{
     font-weight: 700;
