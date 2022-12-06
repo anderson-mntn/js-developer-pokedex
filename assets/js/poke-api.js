@@ -50,12 +50,11 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
 
 let arrPoke = [];
 const fetchPokemon = () => {
-    for(let i = 1; i <= 151; i++){
+    for(let i = 1; i <= 35; i++){
     const url = `https://pokeapi.co/api/v2/pokemon-species/${i}/`
         fetch(url)
         .then(res => res.json())
-        .then(pokemon => {
-        const pokest = pokemon.flavor_text_entries.filter(item => (item.language.name == "en"))
+        .then(pokemon => {pokest = pokemon.flavor_text_entries.filter(item => (item.language.name == "en"))
         aboutArrItem = pokest[i].flavor_text
         arrPoke.push(aboutArrItem)
         })
