@@ -50,7 +50,7 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
 
 let arrPoke = [];
 const fetchPokemon = () => {
-    for(let i = 1; i <= 40; i++){
+    for(let i = 1; i <= 30; i++){
     const url = `https://pokeapi.co/api/v2/pokemon-species/${i}/`
         fetch(url)
         .then(res => res.json())
