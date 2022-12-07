@@ -1,6 +1,7 @@
+const pokeApi = {}
+var t = 0
 
-
-function convertPokeApiDetailToPokemon(pokeDetail) {
+async function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
@@ -23,43 +24,36 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.spcdef = pokeDetail.stats[4].base_stat
     pokemon.speed = pokeDetail.stats[5].base_stat
 
-    pokemon.story = arrPoke[t]
-    t++
-    console.log(pokemon);
+    await fetch(pokeDetail.species.url)
+    .then((response) => response.json())
+    .then((detail) => {
+        detail.flavor_text_entries.map((text) => {
+            if (text.language.name === 'en') {
+                pokemon.story = text.flavor_text;
+            }
+        });
+    })       
+    
     return pokemon
-}
-const pokeApi = {}
-var t = 0
-
-pokeApi.getPokemonDetail = (pokemon) => {
-    return fetch(pokemon.url)
-        .then((response) => response.json())
-        .then(convertPokeApiDetailToPokemon)
 }
 
 pokeApi.getPokemons = (offset = 0, limit = 5) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-
+    
     return fetch(url)
-        .then((response) => response.json())
-        .then((jsonBody) => jsonBody.results)
-        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
-        .then((detailRequests) => Promise.all(detailRequests))
-        .then((pokemonsDetails) => pokemonsDetails)
+    .then((response) => response.json())
+    .then((jsonBody) => jsonBody.results)
+    .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
+    .then((detailRequests) => Promise.all(detailRequests))
+    .then((pokemonsDetails) => pokemonsDetails)
+}
+
+pokeApi.getPokemonDetail = (pokemon) => {
+    return fetch(pokemon.url)
+    .then((response) => response.json())
+    .then(convertPokeApiDetailToPokemon)
 }
 
 
-let arrPoke = [];
-fetchPokemon = () => {
-        for(let i = 1; i <= 151; i++){
-        const url = `https://pokeapi.co/api/v2/pokemon-species/${i}/`
-            fetch(url)
-            .then(res => res.json())
-            .then(pokemon =>  pokemon.flavor_text_entries.filter(item => (item.language.name == "en")))
-            .then((detailRequests) => Promise.all(detailRequests))
-            .then((text) => {arrPoke.push(text[0].flavor_text)})
-        }
-        return arrPoke
-     }
-fetchPokemon()
+
 
