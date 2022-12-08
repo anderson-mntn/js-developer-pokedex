@@ -47,14 +47,26 @@ function convertPokemonToLi(pokemon) {
                 <li class="stats-li">SPD</li> <li>${pokemon.speed}</li> <li class="poke-bar" ><div class="bar-spd bar" style="width: ${pokemon.speed}%">&nbsp;</div></li>
             </ul>
             <div class="poke-story">
-            <p>${pokemon.story}</p>
+                <ul>
+                    <li>En</li>
+                    <li>Es</li>
+                    <li>Fr</li>
+                    <li>It</li>
+                    <li>Jp</li>
+                </ul>
+                <div class="storyDiv">
+                    <p class="main-story">${pokemon.storyEn}</p>
+                    <p class="story-hide story-en">${pokemon.storyEn}</p>
+                    <p class="story-hide story-es">${pokemon.storyEs}</p>
+                    <p class="story-hide story-fr">${pokemon.storyFr}</p>
+                    <p class="story-hide story-it">${pokemon.storyIt}</p>
+                    <p class="story-hide story-jp">${pokemon.storyJp}</p>
+                </div>
             </div>
             <input type="button" value="X" class="closeButton" id="closeBtn">
         </li>
     `
 }
-
-
 
 loadPokemonItens(offset, limit)
 
@@ -85,6 +97,7 @@ document.addEventListener('click', function(e){
         let pokeClass = pokeActual.classList[1]
         pokeLi.classList = pokeClass
         pokeLi.classList.add("mostrar")
+ 
     }
     if(e.target.id == "closeBtn"){
         modal.style.display = "none"
@@ -114,16 +127,30 @@ document.addEventListener('click', function(e){
         pokeStatsUl.style.display = "none"
         pokeStory.style.display = "flex"
     }
+    // ----- Language Buttons Handlers -----
+    if(e.target.innerText == "En"){
+        let storyEnText = document.querySelector('.modal .story-en')
+        let mainStory = document.querySelector('.modal .main-story')
+        mainStory.innerText = storyEnText.innerText
+    }
+    if(e.target.innerText == "Es"){
+        let storyEsText = document.querySelector('.modal .story-es')
+        let mainStory = document.querySelector('.modal .main-story')
+        mainStory.innerText = storyEsText.innerText
+    }
+    if(e.target.innerText == "Fr"){
+        let storyFrText = document.querySelector('.modal .story-fr')
+        let mainStory = document.querySelector('.modal .main-story')
+        mainStory.innerText = storyFrText.innerText
+    }
+    if(e.target.innerText == "It"){
+        let storyItText = document.querySelector('.modal .story-it')
+        let mainStory = document.querySelector('.modal .main-story')
+        mainStory.innerText = storyItText.innerText
+    }
+    if(e.target.innerText == "Jp"){
+        let storyJpText = document.querySelector('.modal .story-jp')
+        let mainStory = document.querySelector('.modal .main-story')
+        mainStory.innerText = storyJpText.innerText
+    }
 })
-
-
-//Criar um loop com appendendo child no <p> de story /seu proprio bloco
-
-// function appStory (){
-//     for (let index = 0; index < 6; index++) {
-//         let storyApp = document.createElement("p")
-//         storyApp.innerText = fetchPokemon()[index]
-//         console.log(storyApp); 
-//     }
-// }
-// appStory()

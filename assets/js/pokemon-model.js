@@ -5,8 +5,8 @@ class Pokemon {
     type;
     types = [];
     photo;
-    weight; // vezes 10 = centimetros
-    height; // vezes 10 = gramas
+    weight; // x 10 = g
+    height; // x 10 = cm
     mainmove;
     abi;
     hp;
@@ -15,6 +15,10 @@ class Pokemon {
     spcatk;
     spcdef;
     speed;
-    story;
+    storyEn;
+    storyEs;
+    storyFr;
+    storyIt;
+    storyJp;
 }
 

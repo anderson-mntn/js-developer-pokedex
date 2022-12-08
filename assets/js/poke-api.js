@@ -29,11 +29,46 @@ async function convertPokeApiDetailToPokemon(pokeDetail) {
     .then((story) => {
         story.flavor_text_entries.map((text) => {
             if (text.language.name === 'en') {
-                pokemon.story = text.flavor_text;
+                pokemon.storyEn = text.flavor_text;
             }
         });
-    })       
-
+    })
+    await fetch(pokeDetail.species.url)
+    .then((res) => res.json())
+    .then((story) => {
+        story.flavor_text_entries.map((text) => {
+            if (text.language.name === 'es') {
+                pokemon.storyEs = text.flavor_text;
+            }
+        });
+    }) 
+    await fetch(pokeDetail.species.url)
+    .then((res) => res.json())
+    .then((story) => {
+        story.flavor_text_entries.map((text) => {
+            if (text.language.name === 'it') {
+                pokemon.storyIt = text.flavor_text;
+            }
+        });
+    }) 
+    await fetch(pokeDetail.species.url)
+    .then((res) => res.json())
+    .then((story) => {
+        story.flavor_text_entries.map((text) => {
+            if (text.language.name === 'ja') {
+                pokemon.storyJp = text.flavor_text;
+            }
+        });
+    })        
+    await fetch(pokeDetail.species.url)
+    .then((res) => res.json())
+    .then((story) => {
+        story.flavor_text_entries.map((text) => {
+            if (text.language.name === 'fr') {
+                pokemon.storyFr = text.flavor_text;
+            }
+        });
+    })
     return pokemon
 }
 
@@ -53,7 +88,3 @@ pokeApi.getPokemonDetail = (pokemon) => {
     .then((response) => response.json())
     .then(convertPokeApiDetailToPokemon)
 }
-
-
-
-
