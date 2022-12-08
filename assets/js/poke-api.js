@@ -25,15 +25,15 @@ async function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.speed = pokeDetail.stats[5].base_stat
 
     await fetch(pokeDetail.species.url)
-    .then((response) => response.json())
-    .then((detail) => {
-        detail.flavor_text_entries.map((text) => {
+    .then((res) => res.json())
+    .then((story) => {
+        story.flavor_text_entries.map((text) => {
             if (text.language.name === 'en') {
                 pokemon.story = text.flavor_text;
             }
         });
     })       
-    
+
     return pokemon
 }
 
