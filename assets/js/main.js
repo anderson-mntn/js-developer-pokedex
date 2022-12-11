@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const maxRecords = 151
+const maxRecords = 251
 const limit = 12;
 let offset = 0;
 
@@ -131,7 +131,7 @@ document.addEventListener('click', function(e){
     if(e.target.innerText == "En"){
         let storyEnText = document.querySelector('.modal .story-en')
         let mainStory = document.querySelector('.modal .main-story')
-        mainStory.innerText = storyEnText.innerText
+        mainStory.innerText = storyEnText.innerHTML
     }
     if(e.target.innerText == "Es"){
         let storyEsText = document.querySelector('.modal .story-es')

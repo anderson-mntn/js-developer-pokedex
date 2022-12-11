@@ -230,22 +230,25 @@ footer{
     display: none;
 }
 .modal .poke-story{
+    height: 175px;
     width: 100%;
     display: none;
     text-align: left;
     font-size: 1.25rem;
-    min-height: 175px;
+    /* min-height: 175px; */
     border-radius: 1rem;
     background-color: rgba(128, 128, 128, 0.26);
     align-items: center;
+    padding: .5rem 0.5rem;
     flex-direction: column;
 }
 .modal .poke-story ul{
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin: 1rem 0 .25rem;
+    margin: 0;
     padding: 0;
+    margin-bottom: 0.5rem;
 }
 .modal .poke-story ul li{
     background-color: #0000001c;
@@ -257,8 +260,8 @@ footer{
     font-size: 1rem;
 }
 .modal .poke-story p{
-    margin: 0.5rem;
-    padding: 0.25rem .5rem 1rem;
+    margin: 0;
+    padding: 0.25rem .5rem 0rem;
     /* margin-top: 1rem; */
 }
 @keyframes mostrarModal{
@@ -339,7 +342,7 @@ footer{
         width: auto;
     }
     .modal .poke-story{
-        height: fit-content;
+        height: 175px;
     }
 }
 @media only screen and (max-width: 650px){
@@ -368,6 +371,7 @@ footer{
         width: 100%;
         font-size: 1.2rem;
         min-height: 175px;
+        height: fit-content;
     }
 }
 @media only screen and (max-width: 410px){
@@ -410,11 +414,14 @@ footer{
         margin: .2em;
     }
     .modal .poke-story ul{
-        margin: .5rem 0 0 0;
+        margin: 0;
     }
 }
 @media only screen and (max-width: 266px){
     .stats-board{
         margin: 0;
+    }
+    .modal{
+        padding: 2px;
     }
 }
