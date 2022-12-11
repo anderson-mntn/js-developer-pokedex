@@ -338,12 +338,6 @@ footer{
     footer{
         font-size: 0.75rem;
     }
-    .modal .poke-story{
-        width: auto;
-    }
-    .modal .poke-story{
-        height: 175px;
-    }
 }
 @media only screen and (max-width: 650px){
     .content{
@@ -368,10 +362,7 @@ footer{
         display: none;
     }
     .modal .poke-story{
-        width: 100%;
         font-size: 1.2rem;
-        min-height: 175px;
-        height: fit-content;
     }
 }
 @media only screen and (max-width: 410px){
