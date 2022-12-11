@@ -340,9 +340,8 @@ footer{
     }
     .modal .poke-story{
         width: auto;
-    }
-    .modal .poke-story{
-        height: 175px;
+        height: fit-cotent;
+        min-height: 175px;
     }
 }
 @media only screen and (max-width: 650px){
@@ -370,8 +369,6 @@ footer{
     .modal .poke-story{
         width: 100%;
         font-size: 1.2rem;
-        min-height: 175px;
-        height: fit-content;
     }
 }
 @media only screen and (max-width: 410px){
