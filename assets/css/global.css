@@ -218,7 +218,7 @@ h1{
 .stats-board li:hover{
     color: #fff;
 }
-footer{
+#github{
     font-size: 1rem;
     position: fixed;
     top: 0;
@@ -230,12 +230,12 @@ footer{
     display: none;
 }
 .modal .poke-story{
-    height: fit-content; 
+    /* height: 175px; */
     width: 100%;
     display: none;
     text-align: left;
     font-size: 1.25rem;
-    min-height: 175px; 
+    /* min-height: 175px; */
     border-radius: 1rem;
     background-color: rgba(128, 128, 128, 0.26);
     align-items: center;
@@ -326,6 +326,67 @@ footer{
 .story-hide{
     display: none;
 }
+select{
+    -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   background-image: none;
+   cursor: pointer;
+   width: 100%;
+   text-align: center;
+   background-color: rgba(0,0,0, .0);
+}
+select::-ms-expand{
+    display: none;
+}
+.select{
+    position: relative;
+    display: flex;
+    width: 13rem;
+    background: #0000004d;
+    margin: 0 4rem 1rem;
+    font-size: 1rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    pointer-events: none;
+    padding: 0 .5rem;
+    background-color: #fff;
+    transition: .4s all ease;
+    padding: .4rem .75rem .75rem .5rem;
+    height: 100%;
+    color: black;
+}
+.select:hover::after{
+    color: #fff;
+    background-color: black;
+}
+#poke-type-filter{
+    color: white;
+    text-align: center;
+    padding: .25rem .5rem .25rem 0 ;
+}
+#poke-type-filter option:nth-child(even){
+    background-color: rgba(128, 128, 128, 0.555);
+}
+#poke-type-filter option:nth-child(odd){
+    background-color: lightgrey;
+} 
+select option{
+    color: black;
+    text-align: center;
+}
+
+
 /* -------------------- MEDIA QUERY -------------------- */
 
 @media only screen and (max-width: 992px){
@@ -335,8 +396,17 @@ footer{
         border-radius: 1rem;
         padding: 1rem;
     }
-    footer{
+    #github{
         font-size: 0.75rem;
+    }
+    .modal .poke-story{
+        width: auto;
+    }
+    .modal .poke-story{
+        height: 175px;
+    }
+    .select{
+        margin: .5rem;
     }
 }
 @media only screen and (max-width: 650px){
@@ -358,11 +428,17 @@ footer{
     .modal .poke-stats, .modal .main-stats{
         width: 76%;
     }
-    footer{
+    #github{
         display: none;
     }
     .modal .poke-story{
+        width: 100%;
         font-size: 1.2rem;
+        min-height: 175px;
+        height: fit-content;
+    }
+    .select{
+        margin: 0 auto 1rem;
     }
 }
 @media only screen and (max-width: 410px){
