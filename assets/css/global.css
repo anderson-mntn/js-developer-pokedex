@@ -344,7 +344,7 @@ select::-ms-expand{
 }
 .select{
     position: relative;
-    display: flex;
+    display: none;
     width: 13rem;
     background: #0000004d;
     margin: 0 4rem 1rem;
