@@ -50,6 +50,8 @@ function convertPokemonToLi(pokemon) {
                 <ul>
                     <li>En</li>
                     <li>Es</li>
+                    <li>Fr</li>
+                    <li>It</li>
                     <li>Jp</li>
                 </ul>
                 <div class="storyDiv">
@@ -150,38 +152,30 @@ document.addEventListener('click', function(e){
     }
 })
 
+let pokeSelect = document.querySelector('#poke-type-filter').addEventListener("click", filterByType)
 
 
 let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('click',(offset, limit) =>{
     limit = 139
     offset = 12
     loadPokemonItens(offset, limit)
-    loadMoreButton.remove()
     console.log(offset, limit)
 })
+
+// let filterType = document.querySelector('#poke-type-filter')
 
 
 
 
 // --------- filter pokemons ---------
-
+const arrToLi = [];
 
 function filterByType (e){
     let ele = e.target.value
-    
-    // limit = 139
-    // offset = 0
-    // loadPokemonItens(offset, limit)
-
-
     let selectedType = pokemonList.getElementsByClassName("pokemon")
     let selectedTypeArr = Array.from(selectedType)
     selectedTypeArr.forEach(function(element){
-        // if(ele == "all"){
-        //     element.style.display = "flex"
-        // } 
         if (element.classList.contains(ele)){
-            console.log("nao" , element)
             element.style.display = "flex"
         } else {
             element.style.display = "none"
