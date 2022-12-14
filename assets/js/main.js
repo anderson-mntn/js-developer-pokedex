@@ -154,10 +154,9 @@ document.addEventListener('click', function(e){
 
 let pokeSelect = document.querySelector('#poke-type-filter').addEventListener("click", filterByType)
 
-
 let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('click',(offset, limit) =>{
-    limit = 139
-    offset = 12
+    pokemonList.innerHTML = ""
+    limit = 151
     loadPokemonItens(offset, limit)
     console.log(offset, limit)
 })
@@ -175,10 +174,16 @@ function filterByType (e){
     let selectedType = pokemonList.getElementsByClassName("pokemon")
     let selectedTypeArr = Array.from(selectedType)
     selectedTypeArr.forEach(function(element){
+        
         if (element.classList.contains(ele)){
             element.style.display = "flex"
         } else {
             element.style.display = "none"
+        }
+
+        
+        if (ele == "all"){
+           element.style.display = "flex"
         }
     })
     
