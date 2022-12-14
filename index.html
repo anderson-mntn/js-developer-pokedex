@@ -29,28 +29,32 @@
 <body>
     <section class="content">
         <h1>Pokedex</h1>
-        <div class="select">
-            <select name="filter-poke" id="poke-type-filter" >
-               <option selected disabled>Choose a Type</option>
-               <option value="all">all</option>
-                <option value="bug">bug</option>
-                <option value="dark">dark</option>
-                <option value="dragon">dragon</option>
-                <option value="electric">electric</option>
-                <option value="fighting">fighting</option>
-                <option value="fire">fire</option>
-                <option value="flying">flying</option>
-                <option value="ghost">ghost</option>
-                <option value="grass">grass</option>
-                <option value="ground">ground</option>
-                <option value="ice">ice</option>
-                <option value="normal">normal</option>
-                <option value="poison">poison</option>
-                <option value="psychic">psychic</option>
-                <option value="rock">rock</option>
-                <option value="steel">steel</option>
-                <option value="water">water</option>
-            </select>
+        <div class="optionsDiv">
+            <div class="select">
+                <select name="filter-poke" id="poke-type-filter" >
+                   <!-- <option selected disabled >Choose a Type</option>
+                    <option>all</option> -->
+                    <option value="bug">bug</option>
+                    <option value="dragon">dragon</option>
+                    <option value="electric">electric</option>
+                    <option value="fighting">fighting</option>
+                    <option value="fire">fire</option>
+                    <option value="flying">flying</option>
+                    <option value="ghost">ghost</option>
+                    <option value="grass">grass</option>
+                    <option value="ground">ground</option>
+                    <option value="ice">ice</option>
+                    <option value="normal">normal</option>
+                    <option value="poison">poison</option>
+                    <option value="psychic">psychic</option>
+                    <option value="rock">rock</option>
+                    <option value="steel">steel</option>
+                    <option value="water">water</option>
+                </select>
+            </div>
+            <div>
+                <input class="seasons-btn" id="firstSeasonBtn" type="button" value="1st Season">    
+            </div>
         </div>
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->

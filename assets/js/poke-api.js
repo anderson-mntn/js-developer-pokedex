@@ -46,29 +46,30 @@ async function convertPokeApiDetailToPokemon(pokeDetail) {
     .then((res) => res.json())
     .then((story) => {
         story.flavor_text_entries.map((text) => {
-            if (text.language.name === 'it') {
-                pokemon.storyIt = text.flavor_text;
-            }
-        });
-    }) 
-    await fetch(pokeDetail.species.url)
-    .then((res) => res.json())
-    .then((story) => {
-        story.flavor_text_entries.map((text) => {
             if (text.language.name === 'ja') {
                 pokemon.storyJp = text.flavor_text;
             }
         });
-    })        
-    await fetch(pokeDetail.species.url)
-    .then((res) => res.json())
-    .then((story) => {
-        story.flavor_text_entries.map((text) => {
-            if (text.language.name === 'fr') {
-                pokemon.storyFr = text.flavor_text;
-            }
-        });
     })
+    // --- Removed  by performance issues ---        
+    // await fetch(pokeDetail.species.url)
+    // .then((res) => res.json())
+    // .then((story) => {
+    //     story.flavor_text_entries.map((text) => {
+    //         if (text.language.name === 'it') {
+    //             pokemon.storyIt = text.flavor_text;
+    //         }
+    //     });
+    // }) 
+    // await fetch(pokeDetail.species.url)
+    // .then((res) => res.json())
+    // .then((story) => {
+    //     story.flavor_text_entries.map((text) => {
+    //         if (text.language.name === 'fr') {
+    //             pokemon.storyFr = text.flavor_text;
+    //         }
+    //     });
+    // })
     return pokemon
 }
 

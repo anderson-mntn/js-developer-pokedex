@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const maxRecords = 251
+const maxRecords = 151
 let limit = 12;
 let offset = 0;
 
@@ -50,16 +50,12 @@ function convertPokemonToLi(pokemon) {
                 <ul>
                     <li>En</li>
                     <li>Es</li>
-                    <li>Fr</li>
-                    <li>It</li>
                     <li>Jp</li>
                 </ul>
                 <div class="storyDiv">
                     <p class="main-story">${pokemon.storyEn}</p>
                     <p class="story-hide story-en">${pokemon.storyEn}</p>
                     <p class="story-hide story-es">${pokemon.storyEs}</p>
-                    <p class="story-hide story-fr">${pokemon.storyFr}</p>
-                    <p class="story-hide story-it">${pokemon.storyIt}</p>
                     <p class="story-hide story-jp">${pokemon.storyJp}</p>
                 </div>
             </div>
@@ -161,10 +157,9 @@ let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('cl
     limit = 139
     offset = 12
     loadPokemonItens(offset, limit)
+    loadMoreButton.remove()
     console.log(offset, limit)
 })
-
-// let filterType = document.querySelector('#poke-type-filter')
 
 
 
@@ -175,17 +170,22 @@ const arrToLi = [];
 function filterByType (e){
     let ele = e.target.value
     
+    // limit = 139
+    // offset = 0
+    // loadPokemonItens(offset, limit)
+
+
     let selectedType = pokemonList.getElementsByClassName("pokemon")
-
-
     let selectedTypeArr = Array.from(selectedType)
-
     selectedTypeArr.forEach(function(element){
-        if (element.classList[1] != ele){
+        // if(ele == "all"){
+        //     element.style.display = "flex"
+        // }
+        if (element.classList.contains(ele)){
             console.log("nao" , element)
-            element.style.display = "none"
-        } else {
             element.style.display = "flex"
+        } else {
+            element.style.display = "none"
         }
     })
     
