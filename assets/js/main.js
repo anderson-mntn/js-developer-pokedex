@@ -2,7 +2,7 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
 const maxRecords = 251
-const limit = 12;
+let limit = 12;
 let offset = 0;
 
 function loadPokemonItens(offset, limit) {
@@ -77,7 +77,6 @@ loadMoreButton.addEventListener('click', () => {
     if (qtdRecordsWithNexPage >= maxRecords) {
         const newLimit = maxRecords - offset
         loadPokemonItens(offset, newLimit)
-
         loadMoreButton.parentElement.removeChild(loadMoreButton)
     } else {
         loadPokemonItens(offset, limit)
@@ -154,3 +153,53 @@ document.addEventListener('click', function(e){
         mainStory.innerText = storyJpText.innerText
     }
 })
+
+let pokeSelect = document.querySelector('#poke-type-filter').addEventListener("click", filterByType)
+
+
+let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('click',(offset, limit) =>{
+    limit = 139
+    offset = 12
+    loadPokemonItens(offset, limit)
+    console.log(offset, limit)
+})
+
+// let filterType = document.querySelector('#poke-type-filter')
+
+
+
+
+// --------- filter pokemons ---------
+const arrToLi = [];
+
+function filterByType (e){
+    let ele = e.target.value
+    
+    let selectedType = pokemonList.getElementsByClassName("pokemon")
+
+
+    let selectedTypeArr = Array.from(selectedType)
+
+    selectedTypeArr.forEach(function(element){
+        if (element.classList[1] != ele){
+            console.log("nao" , element)
+            element.style.display = "none"
+        } else {
+            element.style.display = "flex"
+        }
+    })
+    
+    
+    // ---- modo com Array.forEach ---- 
+    // const classType = document.getElementsByClassName(ele)
+    // const newArray = Array.from(classType)
+
+    // newArray.forEach(function(element){
+    //     let newLi = document.createElement("li")
+    //     newLi.innerHTML = element.innerHTML
+    //     newLi.className = ele
+    //     pokemonList.appendChild(newLi)
+    // })
+}
+
+
