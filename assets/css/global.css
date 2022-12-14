@@ -19,7 +19,7 @@ h1{
 .content {
     text-align: center;
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
     padding: 1rem 2rem;
     max-width: 1270px;
     margin: auto;
@@ -354,6 +354,7 @@ select::-ms-expand{
     font-size: 1rem;
     overflow: hidden;
     border-radius: 1rem;
+    text-align: left;
 }
 .select::after{
     content: "\25BC";
@@ -390,6 +391,7 @@ select option{
     text-align: center;
 }
 .optionsDiv{
+    align-content: space-around;
     background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: space-between;
@@ -429,6 +431,10 @@ select option{
     .select{
         margin: .5rem;
     }
+    .optionsDiv{
+        padding: 0 0rem 1rem;
+        margin-right: 1rem;
+    }
 }
 @media only screen and (max-width: 650px){
     .content{
@@ -459,7 +465,11 @@ select option{
         height: fit-content;
     }
     .select{
-        margin: 0 auto 1rem;
+        margin: 0;
+    }
+    .optionsDiv{
+        margin: 1rem auto .5rem;
+        padding: .5rem;
     }
 }
 @media only screen and (max-width: 410px){

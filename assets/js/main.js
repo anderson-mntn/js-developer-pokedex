@@ -133,16 +133,16 @@ document.addEventListener('click', function(e){
         let mainStory = document.querySelector('.modal .main-story')
         mainStory.innerText = storyEsText.innerText
     }
-    if(e.target.innerText == "Fr"){
-        let storyFrText = document.querySelector('.modal .story-fr')
-        let mainStory = document.querySelector('.modal .main-story')
-        mainStory.innerText = storyFrText.innerText
-    }
-    if(e.target.innerText == "It"){
-        let storyItText = document.querySelector('.modal .story-it')
-        let mainStory = document.querySelector('.modal .main-story')
-        mainStory.innerText = storyItText.innerText
-    }
+    // if(e.target.innerText == "Fr"){
+    //     let storyFrText = document.querySelector('.modal .story-fr')
+    //     let mainStory = document.querySelector('.modal .main-story')
+    //     mainStory.innerText = storyFrText.innerText
+    // }
+    // if(e.target.innerText == "It"){
+    //     let storyItText = document.querySelector('.modal .story-it')
+    //     let mainStory = document.querySelector('.modal .main-story')
+    //     mainStory.innerText = storyItText.innerText
+    // }
     if(e.target.innerText == "Jp"){
         let storyJpText = document.querySelector('.modal .story-jp')
         let mainStory = document.querySelector('.modal .main-story')
@@ -150,7 +150,6 @@ document.addEventListener('click', function(e){
     }
 })
 
-let pokeSelect = document.querySelector('#poke-type-filter').addEventListener("click", filterByType)
 
 
 let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('click',(offset, limit) =>{
@@ -165,7 +164,7 @@ let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('cl
 
 
 // --------- filter pokemons ---------
-const arrToLi = [];
+
 
 function filterByType (e){
     let ele = e.target.value
@@ -180,7 +179,7 @@ function filterByType (e){
     selectedTypeArr.forEach(function(element){
         // if(ele == "all"){
         //     element.style.display = "flex"
-        // }
+        // } 
         if (element.classList.contains(ele)){
             console.log("nao" , element)
             element.style.display = "flex"
