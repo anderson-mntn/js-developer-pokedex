@@ -66,7 +66,7 @@ h1{
 }
 .modal .main-stats{
     width: 100%;
-    border: dashed grey 2px;
+    border: dashed #f1eeee 2px;
     padding: .5rem 0;
     display: flex;
     flex-direction: column;
@@ -74,8 +74,9 @@ h1{
     font-size: 1.2rem;
     /* margin: 0 auto 0.25rem; */
     border-radius: 1rem;
-    /* min-height: 175px; */
-    height: 175px;
+    min-height: 175px;
+    /* height: 175px; */
+    box-shadow: 1px 1pxx 5px black;
 }
 .modal .main-stats li span{
     font-size: 1rem;
@@ -230,17 +231,16 @@ h1{
     display: none;
 }
 .modal .poke-story{
-    /* height: 175px; */
-    width: 100%;
     display: none;
     text-align: left;
     font-size: 1.25rem;
-    /* min-height: 175px; */
+    min-height: 175px;
     border-radius: 1rem;
     background-color: rgba(128, 128, 128, 0.26);
     align-items: center;
     padding: .5rem 0.5rem;
     flex-direction: column;
+    width: 100%;
 }
 .modal .poke-story ul{
     display: flex;
@@ -408,7 +408,9 @@ select option{
     color: #fff;
     padding: .4rem .5rem;
 }
-
+.storyDiv{
+    margin: .25rem auto 0;
+}
 
 /* -------------------- MEDIA QUERY -------------------- */
 
@@ -424,9 +426,6 @@ select option{
     }
     .modal .poke-story{
         width: auto;
-    }
-    .modal .poke-story{
-        height: 175px;
     }
     .select{
         margin: .5rem;
@@ -452,14 +451,13 @@ select option{
     .modal .poke-img {
         margin: auto;
     }
-    .modal .poke-stats, .modal .main-stats{
-        width: 76%;
+    .modal .poke-stats, .modal .main-stats, .modal .poke-story{
+        width: 100%;
     }
     #github{
         display: none;
     }
     .modal .poke-story{
-        width: 100%;
         font-size: 1.2rem;
         min-height: 175px;
         height: fit-content;
@@ -492,7 +490,6 @@ select option{
     }
     .modal .stats-board{
         font-size: 1rem;
-        width: auto;
     }
     .modal .poke-img{
         width: 80%;
@@ -504,12 +501,6 @@ select option{
     }
     .modal .poke-stats{
         margin: 0 .25rem;
-    }
-    .modal .poke-stats, .modal .main-stats{
-        width: 100%;
-    }
-    .modal .poke-story ul li{
-        margin: .2em;
     }
     .modal .poke-story ul{
         margin: 0;
