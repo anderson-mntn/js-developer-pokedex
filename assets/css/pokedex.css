@@ -84,6 +84,12 @@
     margin: .5rem;
     padding: .75rem;
     border-radius: 1rem;
+    background-image: url(/assets/imgs/lovepik1.png);
+    background-repeat:no-repeat;
+    background-size: 70% 80%;
+    background-position: 80% 50%;
+   
+
 }
 
 .pokemon .number {
