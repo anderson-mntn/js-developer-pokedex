@@ -434,6 +434,9 @@ select option{
         padding: 0 0rem 1rem;
         margin-right: 1rem;
     }
+    .modal .main-stats{
+        width: 76%;
+    }
 }
 @media only screen and (max-width: 650px){
     .content{
