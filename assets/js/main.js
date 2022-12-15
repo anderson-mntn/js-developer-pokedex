@@ -2,7 +2,7 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
 const maxRecords = 151
-let limit = 12;
+let limit = 151;
 let offset = 0;
 
 function loadPokemonItens(offset, limit) {
@@ -66,18 +66,19 @@ function convertPokemonToLi(pokemon) {
 
 loadPokemonItens(offset, limit)
 
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+// ---- Pagination Button ---- 
+// loadMoreButton.addEventListener('click', () => {
+//     offset += limit
+//     const qtdRecordsWithNexPage = offset + limit
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
-    } else {
-        loadPokemonItens(offset, limit)
-    }
-})
+//     if (qtdRecordsWithNexPage >= maxRecords) {
+//         const newLimit = maxRecords - offset
+//         loadPokemonItens(offset, newLimit)
+//         loadMoreButton.parentElement.removeChild(loadMoreButton)
+//     } else {
+//         loadPokemonItens(offset, limit)
+//     }
+// })
 
 //  ---------- Modal and click events  ----------
 let modal = document.querySelector('#modal-id')
