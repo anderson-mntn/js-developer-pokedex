@@ -50,8 +50,6 @@ function convertPokemonToLi(pokemon) {
                 <ul>
                     <li>En</li>
                     <li>Es</li>
-                    <li>Fr</li>
-                    <li>It</li>
                     <li>Jp</li>
                 </ul>
                 <div class="storyDiv">
