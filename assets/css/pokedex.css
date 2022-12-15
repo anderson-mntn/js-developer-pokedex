@@ -14,7 +14,7 @@
     background-color: #678fee;
 }
 .electric {
-    background-color: #f7cf2e;
+    background-color: #f0e21e;
 }
 
 .ice {
@@ -80,8 +80,8 @@
     border-radius: 1rem;
     background-image: url(/assets/imgs/dots.png);
     background-repeat:no-repeat;
-    background-size: 80% 86%;
-    background-position: 87% 120%;
+    background-size: 80% 80%;
+    background-position: 67% 96%;
    
 
 }
@@ -121,6 +121,7 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+    text-shadow: 0 0px 3px  black;
 }
 
 .pokemon .detail img {
@@ -148,6 +149,10 @@
     border: none;
     border-radius: 1rem;
 }
+.type .electric{
+    filter: brightness(0.5);
+}
+
 
 @media only screen and (max-width: 992px){
     .pokemons{
