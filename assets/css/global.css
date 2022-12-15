@@ -65,7 +65,7 @@ h1{
     filter: brightness(0.9)
 }
 .modal .main-stats{
-    width: 100%;
+    width: 76%;
     border: dashed #f1eeee 2px;
     padding: .5rem 0;
     display: flex;
@@ -170,7 +170,7 @@ h1{
     font-size: 1rem;
 }
 .modal .poke-stats{
-    background: #ffffff14;
+    background: #ffffff25;
     display: grid;
     grid-template-columns: 0.3fr 0.2fr 1fr;
     font-size: 1rem;
@@ -236,7 +236,7 @@ h1{
     font-size: 1.25rem;
     min-height: 175px;
     border-radius: 1rem;
-    background-color: rgba(128, 128, 128, 0.26);
+    background-color: #00000010;
     align-items: center;
     padding: .5rem 0.5rem;
     flex-direction: column;
@@ -348,7 +348,7 @@ select::-ms-expand{
 .select{
     position: relative;
     display: flex;
-    width: 13rem;
+    width: 12rem;
     background: #0000004d;
     margin: 0 0 1rem;
     font-size: 1rem;
