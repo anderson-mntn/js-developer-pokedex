@@ -463,7 +463,8 @@ select option{
         height: fit-content;
     }
     .select{
-        margin: 0;
+        margin: auto;
+        width: 10rem;
     }
     .optionsDiv{
         margin: 1rem auto .5rem;
