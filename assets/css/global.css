@@ -452,7 +452,7 @@ select option{
         margin: auto;
     }
     .modal .poke-stats, .modal .main-stats, .modal .poke-story{
-        width: 100%;
+        width: 95%;
     }
     #github{
         display: none;
