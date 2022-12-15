@@ -14,7 +14,7 @@ function loadPokemonItens(offset, limit) {
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.types.map((type) => type).join(' ')}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -187,17 +187,6 @@ function filterByType (e){
         }
     })
     
-    
-    // ---- modo com Array.forEach ---- 
-    // const classType = document.getElementsByClassName(ele)
-    // const newArray = Array.from(classType)
-
-    // newArray.forEach(function(element){
-    //     let newLi = document.createElement("li")
-    //     newLi.innerHTML = element.innerHTML
-    //     newLi.className = ele
-    //     pokemonList.appendChild(newLi)
-    // })
 }
 
 

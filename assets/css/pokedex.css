@@ -10,18 +10,9 @@
     background-color: #a6a877;
 }
 
-.grass {
-    background-color: #77c850;
-}
-
-.fire {
-    background-color: #ee7f30;
-}
-
 .water {
     background-color: #678fee;
 }
-
 .electric {
     background-color: #f7cf2e;
 }
@@ -29,7 +20,6 @@
 .ice {
     background-color: #98d5d7;
 }
-
 .ground {
     background-color: #dfbf69;
 }
@@ -37,11 +27,15 @@
 .flying {
     background-color: #a98ff0;
 }
-
+.fire {
+    background-color: #ee7f30;
+}
 .poison {
     background-color: #a040a0;
 }
-
+.grass {
+    background-color: #77c850;
+}
 .fighting {
     background-color: #bf3029;
 }
@@ -84,10 +78,10 @@
     margin: .5rem;
     padding: .75rem;
     border-radius: 1rem;
-    background-image: url(/assets/imgs/lovepik1.png);
+    background-image: url(/assets/imgs/dots.png);
     background-repeat:no-repeat;
-    background-size: 70% 80%;
-    background-position: 80% 50%;
+    background-size: 80% 70%;
+    background-position: 87% 70%;
    
 
 }
