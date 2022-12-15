@@ -411,6 +411,9 @@ select option{
 .storyDiv{
     margin: .25rem auto 0;
 }
+.modal .main-stats{
+        width: 100%;
+    }
 
 /* -------------------- MEDIA QUERY -------------------- */
 
