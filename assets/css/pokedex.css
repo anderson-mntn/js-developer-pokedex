@@ -129,6 +129,7 @@
     width: 100px;
     height: 100px;
     margin: 0.5rem;
+    filter: drop-shadow(2px 2px 0.5rem #4d2d33);
 }
 
 .pagination {
