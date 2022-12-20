@@ -160,28 +160,27 @@ let firstSeason = document.querySelector("#firstSeasonBtn").addEventListener('cl
     console.log(offset, limit)
 })
 
-// let filterType = document.querySelector('#poke-type-filter')
+
 
 
 
 
 // --------- filter pokemons ---------
-const arrToLi = [];
 
 function filterByType (e){
-    let ele = e.target.value
+    let filterType = document.querySelector('#poke-type-filter')
+    let pokeValue = filterType.value
+    //let ele = e.target.value
     let selectedType = pokemonList.getElementsByClassName("pokemon")
     let selectedTypeArr = Array.from(selectedType)
     selectedTypeArr.forEach(function(element){
         
-        if (element.classList.contains(ele)){
+        if (element.classList.contains(pokeValue)){
             element.style.display = "flex"
         } else {
             element.style.display = "none"
         }
-
-        
-        if (ele == "all"){
+        if (pokeValue == "all"){
            element.style.display = "flex"
         }
     })
