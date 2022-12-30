@@ -115,7 +115,7 @@ document.addEventListener('click', function(e){
         pokeStatsUl.style.display = "grid"
         pokeStory.style.display = "none"
     }
-    if(e.target.innerHTML == "Story"){
+    if(e.target.innerHTML == "Fact"){
         let attUlMainStats = document.querySelector(".modal .main-stats")
         let pokeStatsUl = document.querySelector(".modal .poke-stats")
         let pokeStory = document.querySelector(".modal .poke-story")
