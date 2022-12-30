@@ -30,7 +30,7 @@ function convertPokemonToLi(pokemon) {
             <ul class="stats-board">
                 <li id="board-att-li">Stats</li>
                 <li>Attributes</li>
-                <li>Story</li> 
+                <li>Fact</li> 
             </ul>
             <ul class="main-stats">
                 <li>Weight: ${pokemon.weight / 10}kg</li>
