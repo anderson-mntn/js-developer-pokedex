@@ -51,7 +51,7 @@ async function convertPokeApiDetailToPokemon(pokeDetail) {
             }
         });
     })
-    // --- Removed  by performance issues ---        
+    // --- Other Languages (italian, french) ---        
     // await fetch(pokeDetail.species.url)
     // .then((res) => res.json())
     // .then((story) => {
