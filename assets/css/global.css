@@ -6,6 +6,7 @@
 body {
     background-image: url(/assets/imgs/bg.png);
     background-attachment: fixed;
+    background-size: cover;
 }
 h1{
     color: #fff;
